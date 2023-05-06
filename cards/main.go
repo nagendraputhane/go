@@ -3,12 +3,18 @@ package main
 import "fmt"
 
 func main() {
-	var card string = "Ace of Spades"
-	//variable name string = "string"
+	//array - fixed. Same datatype
+	//slice - array that can grown and shrink
+	cards := []string{"Ace of Diamonds", newCard()}
+	//var = []datatype{}
+	cards = append(cards, "Six of Spades")
 
-	cards := "Ace of Spades"
-	//same as var cards string
-	//:= only when declaring new variable
-	card = "Five of Diamonds"
-	fmt.Println(card, cards)
+	for i, card := range cards {
+		//for index, current item := range slice {}
+		fmt.Println(i, card)
+	}
+}
+
+func newCard() string {
+	return "Five of Diamonds"
 }
