@@ -30,3 +30,28 @@ for index, current item := range slice {}
 
 type name []string
 Functions with a Receiver
+
+func (d deck) print() {}
+func RECEIVER(var our-type) func-name() {} - just the receiver is the extra part than normal func
+card.print() - any variable of type deck gets access to print method
+d - copy of deck. thats why it is used in "range"
+deck - any var of type deck gets access to this method
+receiver = this/self keyword of other languages
+
+slice is indexed from 0
+slice[start_index_Including : up_to_Not_including] - fruits[0:2], fruits[:3]
+
+multiple return values: func name() (type, type) {}
+var1, va2 := func()
+
+func WriteFile(filename string, data []byte, perm os.FileMode) error
+convert "deck" to(type conversion) []byte. []byte slice is basically a string
+deck -> []string -> string -> []byte
+[]byte(string) - every element on it is an ASCII value
+
+strings.Join(slice, "separator")
+strings.Split(string, "separator")
+
+func ReadFile(filename string) ([]byte, error)
+
+os.Exit(1)
